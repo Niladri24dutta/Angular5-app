@@ -1,0 +1,8 @@
+<p>
+ Welcome {{user}}
+</p>
+<h2 [class]="successClass">This is a test for class binding</h2> <br>
+<h2 [class.text-danger]="hasError">This is a test for conditional class binding</h2> <br>
+<h2 [ngClass]="messagesTypes">This is a test for ngClass</h2> <br>
+
+<button (click)="changeMessageType()">Click here to change the color of conditional binding</button>
