@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StylebindingComponent implements OnInit {
 
+  public availableStyles = {
+    color:"blue",
+    fontStyle:"italic"
+  } 
   constructor() { }
 
   ngOnInit() {
