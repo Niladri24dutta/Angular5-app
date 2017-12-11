@@ -8,12 +8,9 @@ import {UsersService} from './services/user.service'
 })
 export class AppComponent {
   title = 'Angular5 demo';
-  editedUser:string = '';
 
  constructor(private userService:UsersService) {
 
  }
-  editUser(){
-   this.userService.editUser(this.editedUser);
-  }
+  
 }

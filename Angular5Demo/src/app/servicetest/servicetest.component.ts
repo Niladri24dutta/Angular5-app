@@ -8,10 +8,18 @@ import {UsersService} from '../services/user.service'
 })
 export class ServicetestComponent implements OnInit {
   private user:string = '';
-  constructor(private userService:UsersService) { }
+  
+  editedUser:string = '';
+
+  constructor(private userService:UsersService) { 
+    
+  }
 
   ngOnInit() {
     this.userService.userObservable.subscribe( user => this.user = user);
   }
 
+  editUser(){
+    this.userService.editUser(this.editedUser);
+   }
 }
