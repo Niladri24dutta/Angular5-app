@@ -7,6 +7,10 @@ import { StylebindingComponent } from './stylebinding/stylebinding.component';
 import { ServicetestComponent } from './servicetest/servicetest.component';
 import {UsersService} from './services/user.service'
 import {FormsModule} from '@angular/forms'
+import {ModalModule} from 'ngx-bootstrap/modal'
+import {BsDropdownModule} from 'ngx-bootstrap/dropdown'
+import {TooltipModule} from 'ngx-bootstrap/tooltip'
+import {DatepickerModule} from 'ngx-bootstrap/datepicker'
 
 
 @NgModule({
@@ -19,7 +23,11 @@ import {FormsModule} from '@angular/forms'
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    ModalModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    DatepickerModule.forRoot()
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]
