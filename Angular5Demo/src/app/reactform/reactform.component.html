@@ -1,0 +1,22 @@
+<div>
+    
+      <h3>Reactive form example with <pre [innerHTML] = "showcode('change')"></pre> </h3>
+       <br>
+<form [formGroup]="mainForm" novalidate>
+  <div class="form-group">
+    <label for="firstname">Enter your first name</label>
+    <input  type="text" class="form-control" formControlName = "firstname" />
+  </div>
+  <div class="form-group">
+      <label for="lastname">Enter your last name</label>
+      <input  type="text" class="form-control" formControlName = "lastname" />
+  </div>
+  <button type="submit" class="btn btn-success">
+    Submit
+  </button>
+</form>
+<div *ngIf="mainForm.value.firstname && mainForm.value.lastname" class="panel col-xs-6">
+    <label for="output"><strong>Result:</strong></label>
+    <pre>Hello {{mainForm.value.firstname}},{{mainForm.value.lastname}}</pre>
+</div>
+</div>

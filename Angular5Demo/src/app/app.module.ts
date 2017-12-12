@@ -12,7 +12,8 @@ import {ModalModule} from 'ngx-bootstrap/modal'
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown'
 import {TooltipModule} from 'ngx-bootstrap/tooltip'
 import {DatepickerModule} from 'ngx-bootstrap/datepicker';
-import { TemplateFrmComponent } from './template-frm/template-frm.component'
+import { TemplateFrmComponent } from './template-frm/template-frm.component';
+import { ReactformComponent } from './reactform/reactform.component'
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TemplateFrmComponent } from './template-frm/template-frm.component'
     TestComponent,
     StylebindingComponent,
     ServicetestComponent,
-    TemplateFrmComponent
+    TemplateFrmComponent,
+    ReactformComponent
   ],
   imports: [
     BrowserModule,

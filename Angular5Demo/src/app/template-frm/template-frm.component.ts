@@ -17,7 +17,6 @@ export class TemplateFrmComponent implements OnInit {
    phone:""
  }
 
- private codesnippet : SafeHtml;
  private formattedsnippet:string = '';
   constructor(private sanitizer:DomSanitizer) {
    }
