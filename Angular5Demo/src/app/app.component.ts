@@ -7,7 +7,7 @@ import {UsersService} from './services/user.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular5 demo';
+  pageTitle = 'Angular5 demo';
 
  constructor(private userService:UsersService) {
 

@@ -2,6 +2,8 @@ import {Routes,RouterModule} from '@angular/router';
 import {TestComponent} from './test/test.component';
 import {StylebindingComponent} from './stylebinding/stylebinding.component';
 import {ServicetestComponent} from './servicetest/servicetest.component';
+import {TemplateFrmComponent} from './template-frm/template-frm.component'
+import {ReactformComponent} from './reactform/reactform.component'
 
 const routes:Routes = [
 
@@ -18,8 +20,16 @@ const routes:Routes = [
         component:ServicetestComponent 
     },
     {
+        path:'templateform',
+        component:TemplateFrmComponent 
+    },
+    {
+        path:'reactform',
+        component:ReactformComponent 
+    },
+    {
         path:'',
-        redirectTo:'/welcome',
+        redirectTo:'/class',
         pathMatch:'full'
     }
 

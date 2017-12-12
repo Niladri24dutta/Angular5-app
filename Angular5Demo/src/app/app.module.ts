@@ -7,10 +7,13 @@ import { StylebindingComponent } from './stylebinding/stylebinding.component';
 import { ServicetestComponent } from './servicetest/servicetest.component';
 import {UsersService} from './services/user.service'
 import {FormsModule} from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms'
 import {ModalModule} from 'ngx-bootstrap/modal'
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown'
 import {TooltipModule} from 'ngx-bootstrap/tooltip'
-import {DatepickerModule} from 'ngx-bootstrap/datepicker'
+import {DatepickerModule} from 'ngx-bootstrap/datepicker';
+import { TemplateFrmComponent } from './template-frm/template-frm.component';
+import { ReactformComponent } from './reactform/reactform.component'
 
 
 @NgModule({
@@ -18,11 +21,14 @@ import {DatepickerModule} from 'ngx-bootstrap/datepicker'
     AppComponent,
     TestComponent,
     StylebindingComponent,
-    ServicetestComponent
+    ServicetestComponent,
+    TemplateFrmComponent,
+    ReactformComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     routing,
     ModalModule.forRoot(),
     BsDropdownModule.forRoot(),
