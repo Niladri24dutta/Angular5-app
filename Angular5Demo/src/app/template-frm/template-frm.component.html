@@ -1,9 +1,15 @@
 <div>
 
-  <h3>Template driven form example with <pre [innerHTML] = "showcode('change')"></pre> </h3>
+  <h3>Template driven form example 1 with 'change' event</h3> <br>
+  <div class="row col-xs-6">
+    <button  type="button" class="btn btn-primary" (click)="displayCodeBlock()">
+      {{buttonText}} code
+    </button>
+  </div> <br> <br>
+  <div *ngIf="showCodeSnippet" class="row" style="margin-left:1px">
+    <pre style="width:80%"  [innerHTML] = "showcode('change')"></pre> 
+  </div>
    <br>
-
-  
   <form (ngSubmit)="onSubmit()" #form01 [ngFormOptions] = "{ updateOn : 'change' }">
     <div class="form-group">
       <label for="firstname">Enter your first name</label>
@@ -34,9 +40,12 @@
       <pre>Hello {{model.firstname}},{{model.lastname}}</pre>
   </div>
   <hr><br>
-  <h3>Template driven form example with <pre [innerHTML] = "showcode('blur')"></pre> </h3>
+  <h3>Template driven form example with 2 with 'blur' event </h3>
   <br>
-
+  <div *ngIf="showCodeSnippet" class="row" style="margin-left:1px">
+    <pre style="width:80%"  [innerHTML] = "showcode('blur')"></pre> 
+  </div> 
+  <br>
  
  <form (ngSubmit)="onSubmit()" #form01 [ngFormOptions] = "{ updateOn : 'blur' }">
    <div class="form-group">
@@ -68,10 +77,11 @@
      <pre>your Department : {{model.department}} and address is {{model.address}}</pre>
  </div>
  <hr><br>
- <h3>Template driven form example with <pre [innerHTML] = "showcode('submit')"></pre> </h3>
+ <h3>Template driven form example 3 with 'submit' event </h3> <br>
+ <div *ngIf="showCodeSnippet" class="row" style="margin-left:1px">
+  <pre style="width:80%"  [innerHTML] = "showcode('submit')"></pre> 
+</div> 
  <br>
-
-
 <form (ngSubmit)="onSubmit()" #form01 [ngFormOptions] = "{ updateOn : 'submit' }">
   <div class="form-group">
     <label for="email">Enter email</label>

@@ -17,8 +17,11 @@ export class TemplateFrmComponent implements OnInit {
    phone:""
  }
 
- private formattedsnippet:string = '';
+ private formattedSnippet:string = '';
+ private buttonText:string
+ private showCodeSnippet:boolean = false;
   constructor(private sanitizer:DomSanitizer) {
+    this.buttonText = this.showCodeSnippet ? "Hide" : "Show";
    }
 
   ngOnInit() {
@@ -29,17 +32,22 @@ export class TemplateFrmComponent implements OnInit {
 
   showcode(option:string){
     if(option === "change"){
-      this.formattedsnippet =  `[ngModelOptions] ="{ updateOn : 'change' } (at form control level) or [ngFormOptions] = "{ updateOn : 'change' }" (at form level)`;
+      this.formattedSnippet =  `[ngModelOptions] ="{ updateOn : 'change' } (at form control level) or [ngFormOptions] = "{ updateOn : 'change' }" (at form level)`;
     }
     else if(option === "blur"){
-      this.formattedsnippet =  `[ngModelOptions] ="{ updateOn : 'blur' } (at form control level) or [ngFormOptions] = "{ updateOn : 'blur' }" (at form level)`;
+      this.formattedSnippet =  `[ngModelOptions] ="{ updateOn : 'blur' } (at form control level) or [ngFormOptions] = "{ updateOn : 'blur' }" (at form level)`;
     }
     else if (option === "submit"){
-      this.formattedsnippet = `[ngModelOptions] ="{ updateOn : 'submit' } (at form control level) or [ngFormOptions] = "{ updateOn : 'submit' }" (at form level)`;
+      this.formattedSnippet = `[ngModelOptions] ="{ updateOn : 'submit' } (at form control level) or [ngFormOptions] = "{ updateOn : 'submit' }" (at form level)`;
     }
     else{
-      this.formattedsnippet = "";
+      this.formattedSnippet = "";
     }
-    return this.sanitizer.bypassSecurityTrustHtml(this.formattedsnippet);
+    return this.sanitizer.bypassSecurityTrustHtml(this.formattedSnippet);
+  }
+
+  displayCodeBlock(option:string){
+    this.showCodeSnippet = !this.showCodeSnippet;
+    this.buttonText = this.showCodeSnippet ? "Hide" : "Show";
   }
 }
