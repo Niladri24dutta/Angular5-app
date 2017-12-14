@@ -11,7 +11,11 @@ export class ReactformComponent implements OnInit {
 
   mainForm:FormGroup;
   private formattedsnippet:string = '';
-  constructor(private sanitizer:DomSanitizer) { }
+  private buttonText:string
+  private showCodeSnippet:boolean = false;
+  constructor(private sanitizer:DomSanitizer) { 
+    this.buttonText = this.showCodeSnippet ? "Hide" : "Show";
+  }
 
   ngOnInit() {
     this.mainForm = new FormGroup({
@@ -44,5 +48,10 @@ export class ReactformComponent implements OnInit {
     }
     return this.sanitizer.bypassSecurityTrustHtml(this.formattedsnippet);
   }
+ 
 
+  displayCodeBlock(option:string){
+    this.showCodeSnippet = !this.showCodeSnippet;
+    this.buttonText = this.showCodeSnippet ? "Hide" : "Show";
+  }
 }
