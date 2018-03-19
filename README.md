@@ -8,4 +8,5 @@ A short demo with angular5 and angular cli
 - `Rxjs 5.5.2`
 
 # Sample screenshot
-![screen](https://github.com/Niladri24dutta/Angular5-app/blob/master/Karma.jpg)
+
+![screen](https://github.com/Niladri24dutta/Angular5-app/blob/master/karma.jpg)
