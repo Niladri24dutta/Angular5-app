@@ -9,4 +9,4 @@ A short demo with angular5 and angular cli
 
 # Sample screenshot
 
-![screen](https://github.com/Niladri24dutta/Angular5-app/blob/master/karma.jpg)
+![screen](https://github.com/Niladri24dutta/Angular5-app/blob/master/karma.JPG)
