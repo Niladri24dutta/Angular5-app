@@ -10,3 +10,6 @@ A short demo with angular5 and angular cli
 # Sample screenshot
 
 ![screen](https://github.com/Niladri24dutta/Angular5-app/blob/master/karma.JPG)
+
+# Join me at codewars
+![screen](https://www.codewars.com/users/Niladri24dutta/badges/small)
