@@ -26,6 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Current build status
+## Current build status in codeship
 
 [ ![Codeship Status for Niladri24dutta/Angular5-app](https://app.codeship.com/projects/ceaf1cd0-1a3f-0136-87e9-06d510404315/status?branch=master)](https://app.codeship.com/projects/284248)
